@@ -56,15 +56,34 @@ have not opened is not a reference.
 | Incident reporting platform, deployment and evaluation | *Development and Implementation of a Safety Incident Report System for Health Care Discipline Students During Clinical Internships.* [PMC](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11294782/) |
 | ICT4D in African higher education | *ICT4D, Policy Landscapes, and Practice Arenas: A Review of and Reflection on ICT Actors and Applications in African Higher Education.* [Academia](https://www.academia.edu/37339280/) |
 | ICT4D sustainability and failure modes | *Sustainable ICT4D in Africa: Where Do We Go From Here?* [Academia](https://www.academia.edu/33959465/) |
+| Role-based access control, canonical source | Sandhu, R., Coyne, E., Feinstein, H., & Youman, C. (1996). Role-Based Access Control Models. *IEEE Computer*, 29(2), 38-47. [Semantic Scholar](https://www.semanticscholar.org/paper/Role-Based-Access-Control-Models-Sandhu-Coyne/4fc849841e0df1126cc5258924af4d57023758f5) |
 
 The Nsukka paper matters most. It is the closest prior work: same problem, same
 region, same architecture, same stack. **Positioning against it is essential.**
 A reviewer who knows the area will find it, and a paper that does not cite its
 nearest neighbour looks careless at best.
 
-Still needed, and not yet searched: role-based access control, audit logging in
-information systems, and severity classification. Find real sources for those
-or drop the claims that lean on them.
+### What could not be sourced
+
+**Role-based access control** is covered by Sandhu et al. (1996) above, the
+canonical reference and one of the most cited papers in the field. Verified
+through several independent listings.
+
+**Audit logging** and **severity classification** produced nothing citable. A
+search returned vendor documentation, product blogs and patents, with no
+peer-reviewed work suitable for a reference list.
+
+Two honest options, and only these two:
+
+1. Search properly in Google Scholar, ACM DL and IEEE Xplore rather than the
+   open web, and cite what you actually find.
+2. **Drop the claims.** The paper does not need a citation to say the system
+   keeps an append-only audit log or tags severity. Those are design decisions,
+   not contested assertions. Describe them and move on.
+
+Option 2 is usually right. An uncited design decision is normal; a fabricated
+citation supporting one is fatal. The previous reference list existed because
+someone felt every sentence needed a source. It did not.
 
 ---
 
