@@ -41,27 +41,62 @@ The same applies to `International Journal of Cybersecurity` and
 
 Do not reuse any of them. Do not reuse them in the ATC paper either.
 
-### Verified starting points
+### Citations verified against Crossref
 
-These were located through search and exist. **Open each one, read at least the
-abstract, and build the real citation from the paper itself.** A reference you
-have not opened is not a reference.
+These three are confirmed: authors, title, venue, year and DOI come from the
+Crossref API, not from a search result or from memory. They can be cited as
+written.
+
+**Villegas-Ch., W., Ortiz-Garces, I., & Sánchez-Viteri, S. (2021).** Proposal
+for an Implementation Guide for a Computer Security Incident Response Team on a
+University Campus. *Computers*, 10(8), 102.
+https://doi.org/10.3390/computers10080102
+
+**Gil-Hernández, E., Carrillo, I., Guilabert, M., Bohomol, E., Serpa, P. C.,
+Ribeiro Neves, V., Maluenda Martínez, M., Martin-Delgado, J., Pérez-Esteve, C.,
+Fernández, C., & Mira, J. J. (2024).** Development and Implementation of a
+Safety Incident Report System for Health Care Discipline Students During
+Clinical Internships: Observational Study. *JMIR Medical Education*, 10, e56879.
+https://doi.org/10.2196/56879
+
+> Directly comparable prior work: a deployed web-based incident reporting
+> platform, 105 students across five countries, 147 reports, with an evaluation.
+> This is the closest thing to what Paper 2 describes and should be positioned
+> against. Note the venue is JMIR Medical Education, not what its title suggests.
+
+**Sandhu, R. S., Coyne, E. J., Feinstein, H. L., & Youman, C. E. (1996).**
+Role-Based Access Control Models. *Computer*, 29(2), 38-47.
+https://doi.org/10.1109/2.485845
+
+### Located but not yet verified
+
+These exist and were found through search, but have no DOI readily available and
+sit on platforms that block automated access. **Open each one, confirm the
+author list and venue from the paper itself, and check it actually supports the
+claim you attach to it.** Being real is necessary, not sufficient.
 
 | Topic | Source |
 |---|---|
-| Campus incident reporting, near-identical design and stack | *Comprehensive Security and Incident Reporting System for Enhancing Campus Safety of Students at the University of Nigeria, Nsukka.* OOADM, UML, HTML/CSS/PHP/MySQL, three-tier. [ResearchGate](https://www.researchgate.net/publication/396863698_COMPREHENSIVE_SECURITY_AND_INCIDENT_REPORTING_SYSTEM_FOR_ENHANCING_CAMPUS_SAFETY_OF_STUDENTS_AT_THE_UNIVERSITY_OF_NIGERIA_NSUKKA) |
+| Campus incident reporting, near-identical design and stack | *Comprehensive Security and Incident Reporting System for Enhancing Campus Safety of Students at the University of Nigeria, Nsukka.* [ResearchGate](https://www.researchgate.net/publication/396863698_COMPREHENSIVE_SECURITY_AND_INCIDENT_REPORTING_SYSTEM_FOR_ENHANCING_CAMPUS_SAFETY_OF_STUDENTS_AT_THE_UNIVERSITY_OF_NIGERIA_NSUKKA) |
 | Incident reporting and security risk | *The Role of Incident Reporting in Reducing Information Security Risks.* [ResearchGate](https://www.researchgate.net/publication/255634290_The_Role_of_Incident_Reporting_in_Reducing_Information_Security_Risks) |
-| Campus CSIRT design | *Proposal for an Implementation Guide for a Computer Security Incident Response Team on a University Campus.* MDPI Computers 10(8), 102. [MDPI](https://www.mdpi.com/2073-431X/10/8/102) |
 | Web-based safety management in higher education | *Design and Application of Web-Based Campus Safety Facilities Management Information System in Higher Vocational Colleges.* [ResearchGate](https://www.researchgate.net/publication/372123212_Design_and_Application_of_Web-Based_Campus_Safety_Facilities_Management_Information_System_in_Higher_Vocational_Colleges) |
-| Incident reporting platform, deployment and evaluation | *Development and Implementation of a Safety Incident Report System for Health Care Discipline Students During Clinical Internships.* [PMC](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11294782/) |
-| ICT4D in African higher education | *ICT4D, Policy Landscapes, and Practice Arenas: A Review of and Reflection on ICT Actors and Applications in African Higher Education.* [Academia](https://www.academia.edu/37339280/) |
+| ICT4D in African higher education | *ICT4D, Policy Landscapes, and Practice Arenas.* [Academia](https://www.academia.edu/37339280/) |
 | ICT4D sustainability and failure modes | *Sustainable ICT4D in Africa: Where Do We Go From Here?* [Academia](https://www.academia.edu/33959465/) |
-| Role-based access control, canonical source | Sandhu, R., Coyne, E., Feinstein, H., & Youman, C. (1996). Role-Based Access Control Models. *IEEE Computer*, 29(2), 38-47. [Semantic Scholar](https://www.semanticscholar.org/paper/Role-Based-Access-Control-Models-Sandhu-Coyne/4fc849841e0df1126cc5258924af4d57023758f5) |
 
-The Nsukka paper matters most. It is the closest prior work: same problem, same
-region, same architecture, same stack. **Positioning against it is essential.**
-A reviewer who knows the area will find it, and a paper that does not cite its
-nearest neighbour looks careless at best.
+The Nsukka paper matters most: same problem, same region, same three-tier
+architecture, same stack. **Positioning against it is essential.** A reviewer who
+knows the area will find it, and a paper that fails to cite its nearest
+neighbour looks careless at best.
+
+**How to verify one properly.** Find its DOI, then:
+
+```
+curl -s "https://api.crossref.org/works/<DOI>" | python -m json.tool
+```
+
+That returns the authoritative author list, venue, volume and year. If a source
+has no DOI and no indexed record, consider whether it belongs in the
+bibliography at all.
 
 ### What could not be sourced
 
